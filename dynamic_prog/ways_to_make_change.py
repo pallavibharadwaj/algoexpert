@@ -10,7 +10,7 @@ def numberOfWaysToMakeChange(n, denoms):
     
     for coin in denoms:
         if coin > n:
-            break
+            continue
         for i in range(coin, len(ways)):
             ways[i] += ways[i-coin]
     return ways[n]
